@@ -499,7 +499,7 @@ input[type="radio"]+span {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
-	top: 10px;
+	top: 20px;
 	border-radius: 50px;
 	background: #fff;
 	border: 2px solid black;
