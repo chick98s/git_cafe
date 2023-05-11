@@ -205,7 +205,7 @@ main {
 	height: 48px;
 	margin: 50px 250px;
 	border-radius: 25px;
-	background-image: url(http://step079.dothome.co.kr/img/plus.png);
+	background-image: url(../image/plus.png);
 	background-repeat: no-repeat;
 	border: none;
 }
@@ -213,14 +213,14 @@ main {
 .app_banner button:hover {
 	transform: rotate(360deg);
 	transition: .2s ease-in;
-	background-image: url(http://step079.dothome.co.kr/img/cflogo.png);
+	background-image: url(../image/cflogo.png);
 	background-size: 80%;
 	background-position: center;
 }
 
 /* 플레이스토어 */
 .app {
-	background: url(http://step079.dothome.co.kr/img/playstore.png) no-repeat;
+	background: url(../image/playstore.png) no-repeat;
 	background-size: cover;
 	position: absolute;
 	top: 15%;
@@ -230,7 +230,7 @@ main {
 }
 
 .app:hover {
-	background: url(http://step079.dothome.co.kr/img/app.png);
+	background: url(../image/app.png);
 	background-size: cover;
 	transition: .3s ease-in;
 	width: 260px;
