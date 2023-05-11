@@ -420,7 +420,7 @@ article.right h2:nth-child(6) {
 
 .p_drink1 {
 	position: relative;
-	top: 0;
+	top: 5%;
 	left: 7%;
 	float: left;
 	/* 먼저 쓴 색의 퍼센트가 높으면 그라이데이션 안됨 */
@@ -499,6 +499,7 @@ input[type="radio"]+span {
 	display: inline-block;
 	width: 15px;
 	height: 15px;
+	top: 10px;
 	border-radius: 50px;
 	background: #fff;
 	border: 2px solid black;
