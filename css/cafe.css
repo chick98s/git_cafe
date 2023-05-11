@@ -387,7 +387,7 @@ article.right h2:nth-child(6) {
 	height: 500px;
 	top: 80px;
 	font-size: 18px;
-	background-image: url(http://step079.dothome.co.kr/img/bg_best.png);
+	background-image: url(../image/bg_best.png);
 }
 
 .p_card {
@@ -743,22 +743,6 @@ hr {
 	html, body {
 		max-width: 100%;
 		overflow: hidden;
-	}
-
-	/* 플레이스토어 */
-	.app {
-		top: 15%;
-		left: 45%;
-		width: 150px;
-		height: 150px;
-	}
-
-	.app:hover {
-		background: url(http://step079.dothome.co.kr/img/app.png);
-		background-size: cover;
-		transition: .3s ease-in;
-		width: 260px;
-		height: 250px;
 	}
 
 	/* footer */
