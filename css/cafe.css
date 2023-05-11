@@ -509,7 +509,6 @@ input[type="radio"]+span {
 input[type="radio"]:checked+span {
 	width: 30px;
 	height: 15px;
-	text-align: center;
 	border-radius: 50px;
 	background: #ff0000;
 }
