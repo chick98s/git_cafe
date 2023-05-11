@@ -487,7 +487,7 @@ article.right h2:nth-child(6) {
 }
 
 .radio_div label {
-	margin: 15px 5px;
+	margin: 0 5px;
 }
 
 input[type="radio"] {
