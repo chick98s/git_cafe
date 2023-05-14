@@ -6,8 +6,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: 'jejuhallasan';
 }
 
 ul,
@@ -20,33 +18,42 @@ a {
 	text-decoration: none;
 }
 
-html,
-body {
+html, body {
 	height: 100%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
+	font-family: 'jejuhallasan', sans-serif;
+	overflow-x: hidden;
+}
+
+.wrap {
+	position: relative;
+	min-height: 100%;
 }
 
 /* 헤더 */
 header {
-	display: flex;
 	position: relative;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	margin: 0 auto;
+	width: 85%;
 	padding: 1rem;
 	background: #DA0037;
 }
 
 .logo {
-	font-family: 'jejuhallasan', sans-serif;
 	font-size: 35px;
 	font-weight: bold;
 	color: rgb(41, 40, 40);
+}
+
+/* 토글메뉴 */
+.nav_toggle, .toggle_menu {
+	display: none;
 }
 
 /* 드롭다운 메뉴 */
@@ -140,7 +147,7 @@ main {
 
 /* 메인 베너 */
 .swiper-container {
-	width: 100%;
+	width: 85%;
 	height: 500px;
 }
 
@@ -155,16 +162,13 @@ main {
 	display: inline-block;
 	width: 100%;
 	height: 500px;
-	object-fit: cover;
 }
 
-/*
-.swiper-pagination {
+/*.swiper-pagination {
 	position: absolute;
 	height: 25% !important;
 	left: 50% !important;
-}
-*/
+}*/
 
 .swiper-pagination-bullet {
 	padding: 6px 6px;
@@ -175,35 +179,37 @@ main {
 }
 
 .swiper-pagination-bullet-active {
-	background: red !important;
+	background: rgb(41, 40, 40) !important;
 }
 
 /***** 메인 베너 *****/
+
 .app_banner {
 	position: relative;
-	width: 100%;
+	width: 85%;
 	height: 350px;
 	top: 25px;
+	margin: 0 auto;
 	text-align: left;
 	background: #d8d4d5;
 	overflow: hidden;
 }
 
 .app_banner h2 {
-	display: block;
-	padding: 40px 250px;
+	display: inline-block;
+	padding: 40px 150px;
 }
 
 .app_banner p {
 	display: block;
-	margin: -40px 250px;
+	margin: -40px 150px;
 	font-size: 17px;
 }
 
 .app_banner button {
 	width: 51px;
 	height: 48px;
-	margin: 50px 250px;
+	margin: 50px 150px;
 	border-radius: 25px;
 	background-image: url(../image/plus.png);
 	background-repeat: no-repeat;
@@ -240,11 +246,11 @@ main {
 .app_text p {
 	position: absolute;
 	top: 50%;
-	right: -10%;
+	right: -5%;
 	font-size: 50px;
 	font-weight: 700;
 	color: #3e25ad;
-	animation: blink .8s infinite;
+	animation: blink 3s infinite;
 }
 
 @keyframes blink {
@@ -258,22 +264,20 @@ main {
 }
 
 /* article */
-article {
+.juice_left {
 	position: relative;
-	width: 100%;
-	height: 450px;
 	top: 50px;
-	overflow: hidden;
-}
-
-article.left {
-	width: 58%;
+	left: 7.5%;
+	width: 45%;
+	height: 450px;
 	float: left;
+
+	overflow: hidden;
 	box-sizing: border-box;
-	background: rgb(242, 255, 127);
+	background: #e9df50;
 }
 
-article.left img {
+.juice_left img {
 	position: absolute;
 	width: 100%;
 	left: 0px;
@@ -281,11 +285,11 @@ article.left img {
 	transition: all 0.3s linear;
 }
 
-article.left img:hover {
+.juice_left img:hover {
 	transform: scale(1.1);
 }
 
-article.left h2 {
+.juice_left h2 {
 	position: relative;
 	left: 10%;
 	top: 10%;
@@ -294,22 +298,25 @@ article.left h2 {
 	color: #2a7440;
 }
 
-article.left h2:nth-child(5) {
+.juice_left h2:nth-child(5),
+.juice_left h2:nth-child(6) {
 	color: #ad2525;
 }
 
-article.left h2:nth-child(6) {
-	color: #ad2525;
-}
-
-article.right {
-	width: 41.5%;
+.juice_right {
+	position: relative;
+	top: 50px;
+	right: 7.5%;
+	width: 38%;
+	height: 450px;
 	float: right;
+
+	overflow: hidden;
 	box-sizing: border-box;
 	background: #363947;
 }
 
-article.right img {
+.juice_right img {
 	position: absolute;
 	width: 100%;
 	left: 0px;
@@ -317,11 +324,11 @@ article.right img {
 	transition: all 0.3s linear;
 }
 
-article.right img:hover {
+.juice_right img:hover {
 	transform: scale(1.1);
 }
 
-article.right h2 {
+.juice_right h2 {
 	position: relative;
 	left: 10%;
 	top: 10%;
@@ -330,21 +337,19 @@ article.right h2 {
 	color: #e9df50;
 }
 
-article.right h2:nth-child(5) {
-	color: #ff7535;
-}
-
-article.right h2:nth-child(6) {
+.juice_right h2:nth-child(5),
+.juice_right h2:nth-child(6) {
 	color: #ff7535;
 }
 
 /* text 롤링 */
 .marquee {
 	position: relative;
-	width: 100%;
+	width: 85%;
 	height: 60px;
 	top: 75px;
 	font-size: 38px;
+	margin: 0 auto;
 	font-weight: bold;
 	overflow: hidden;
 	border: 5px red;
@@ -383,9 +388,10 @@ article.right h2:nth-child(6) {
 /* 베스트 드링크 */
 .drink_div {
 	position: relative;
-	width: 100%;
+	width: 85%;
 	height: 500px;
 	top: 80px;
+	margin: 0 auto;
 	font-size: 18px;
 	background-image: url(../image/bg_best.png);
 }
@@ -394,7 +400,7 @@ article.right h2:nth-child(6) {
 	position: absolute;
 	margin: 60px 15px;
 	text-align: left;
-	height: 100px;
+	height: auto;
 }
 
 .drink_div h3 {
@@ -411,7 +417,7 @@ article.right h2:nth-child(6) {
 	width: 35%;
 	height: 230px;
 	margin-top: 12%;
-	transition: all 0.5s linear;
+	transition: all .5s ease-in-out;
 }
 
 .best_img:hover {
@@ -421,48 +427,26 @@ article.right h2:nth-child(6) {
 .p_drink1 {
 	position: relative;
 	top: 5%;
-	left: 7%;
 	float: left;
+	border: 1px solid firebrick;
 	/* 먼저 쓴 색의 퍼센트가 높으면 그라이데이션 안됨 */
-	background: linear-gradient(to bottom, rgba(65, 64, 64, 0.8) 70%, pink 30%);
+	background: linear-gradient(to bottom, rgba(65, 64, 64, 0.8) 70%, #FAFAFA 30%);
 	width: 400px;
 	height: 450px;
-	margin: 0px 30px;
+	margin: 0 25px;
 }
 
-.p_drink2 {
-	position: relative;
-	top: 5%;
-	left: 7%;
-	float: left;
-	background: linear-gradient(to bottom, rgb(65, 64, 64, 0.8) 70%, pink 30%);
-	width: 400px;
-	height: 450px;
-	margin: 0px 30px;
-	display: none;
-}
-
-.p_drink3 {
-	position: relative;
-	top: 5%;
-	left: 7%;
-	float: left;
-	background: linear-gradient(to bottom, rgb(65, 64, 64, 0.8) 70%, pink 30%);
-	width: 400px;
-	height: 450px;
-	margin: 0px 30px;
-	display: none;
-}
-
+.p_drink2,
+.p_drink3,
 .p_drink4 {
 	position: relative;
 	top: 5%;
-	left: 7%;
 	float: left;
-	background: linear-gradient(to bottom, rgb(65, 64, 64, 0.8) 70%, pink 30%);
+	border: 1px solid firebrick;
+	background: linear-gradient(to bottom, rgb(65, 64, 64, 0.8) 70%, #FAFAFA 30%);
 	width: 400px;
 	height: 450px;
-	margin: 0px 30px;
+	margin: 0 25px;
 	display: none;
 }
 
@@ -479,10 +463,12 @@ article.right h2:nth-child(6) {
 /* 라디오 버튼 */
 .radio_div {
 	position: relative;
+	width: 85%;
 	top: 85px;
 	height: 55px;
 	text-align: center;
 	background: #FAFAFA;
+	margin: 0 auto;
 }
 
 .radio_div label {
@@ -512,6 +498,7 @@ input[type="radio"]:checked+span {
 	border-radius: 50px;
 	background: #ff0000;
 }
+
 /*****라디오 버튼******/
 
 /* 이벤트 글자 div */
@@ -519,7 +506,7 @@ input[type="radio"]:checked+span {
 	position: absolute;
 	width: 100%;
 	height: 200px;
-	bottom: 5%;
+	bottom: 4.2%;
 }
 
 .event_div span {
@@ -528,20 +515,21 @@ input[type="radio"]:checked+span {
 }
 
 .event_div p {
+	margin-top: 10px;
 	color: #a39e9e;
 }
 
 .event_div hr {
 	width: 60px;
 	height: 1px;
-	margin: 10px auto;
+	margin-top: 15px;
 	background-color: #DA0037;
 }
 
 .event_div button {
 	width: 50px;
 	height: 50px;
-	margin: 10px 0px;
+	margin-top: 20px;
 	border-radius: 50px;
 	background: #ad2525;
 	border: none;
@@ -613,9 +601,6 @@ hr {
 
 .ft_text {
 	display: block;
-}
-
-.ft_text {
 	color: #616060;
 	font-size: 12px;
 }
@@ -658,16 +643,21 @@ hr {
 	/* 플레이스토어 */
 	.app {
 		top: 15%;
-		left: 50%;
+		left: 48%;
 	}
 
 	.app_text p {
 		top: 55%;
-		right: -15%;
+		right: -8%;
 		font-size: 30px;
 	}
 
-	article {
+	/* article */
+	.juice_left {
+		top: 40px;
+	}
+
+	.juice_right {
 		top: 40px;
 	}
 
@@ -688,64 +678,332 @@ hr {
 	.p_drink1 {
 		width: 300px;
 		height: 400px;
-		margin: 50px 32px;
+		margin: 5px 30px;
 	}
 
-	.p_drink2 {
-		width: 300px;
-		height: 400px;
-		margin: 50px 32px;
-	}
-
-	.p_drink3 {
-		width: 300px;
-		height: 400px;
-		margin: 50px 32px;
-	}
-
+	.p_drink2,
+	.p_drink3,
 	.p_drink4 {
 		width: 300px;
 		height: 400px;
-		margin: 50px 32px;
+		margin: 5px 30px;
+	}
+
+	/* 라디오 버튼 */
+	.radio_div {
+		top: 70px;
 	}
 
 	.event_div {
 		position: absolute;
-		bottom: -23.5%;
+		bottom: -16.5%;
 	}
 
 	/* footer */
 	footer {
-		position: relative;
-		bottom: -80%;
+		position: absolute;
+		left: 50%;
+		bottom: -35%;
+		transform: translate(-50%, 0%);
 	}
 
-	hr {
-		display: flex;
-		margin: auto;
+	footer ul {
+		margin-left: 14%; 
 	}
 
 	.ft_text {
-		margin-left: 12%;
-		margin-right: -8%;
+		margin-left: 5%;
 	}
 
 	/* Top 버튼 */
 	.top_btn {
 		bottom: 40px;
-		right: 40px;
+		right: 30px;
 	}
 }
 
+/* 모바일 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
-	html, body {
-		max-width: 100%;
+
+	/* 헤더 */
+	header {
+		height: 50px;
+	}
+
+	.logo {
+		margin: 0 auto;
+		font-size: 35px;
+	}
+
+	nav { display: none; }
+
+	/* 햄버거 메뉴 */
+	.nav_toggle {
+		position: absolute;
+		width: 38px;
+		display: block;
+		border: none;
+		background: none;
+	}
+
+	.nav_toggle.active {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.nav_toggle.active:hover {
+		filter: opacity(0.2) drop-shadow(0 0 0 #c48181);
+	}
+
+	.nav_icon {
+		position: absolute;
+		top: -10px;
+		width: 2rem;
+		height: 1.4rem;
+	}
+
+	.nav_icon span {
+		position: absolute;
+		width: 100%;
+		height: 0.1rem;
+		background-color: rgb(41, 40, 40);
+		display: block;
+		transition: all .3s ease-in-out;
+	}
+
+	.nav_icon span:nth-of-type(1) {
+		top: 0;
+	}
+
+	.nav_icon span:nth-of-type(2) {
+		top: 45%;
+		width: 15px;
+	}
+
+	.nav_icon span:nth-of-type(3) {
+		bottom: 0;
+		width: 25px;
+	}
+
+	/* 보여질 메뉴 */
+	.toggle_menu {
+		opacity: 0;
+
+		/* active가 되면 보여짐 */
+		font-size: 1.4rem;
+	}
+
+	.toggle_menu.active {
+		opacity: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* 사이드 메뉴 */
+	.slide-wrap {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 99;
+		width: 500px;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.slide-menu {
+		position: relative;
+		right: 0;
+		width: 250px;
+		height: 100%;
+		text-align: left;
+		font-weight: bold;
+		background: #f6f6f6;
 		overflow: hidden;
+	}
+
+	.slide-menu span {
+		color: #222222;
+		margin-top: 50px;
+		margin-left: 25px;
+		text-decoration: underline;
+	}
+
+	.slide-menu p {
+		color: #ad2525;
+		margin-top: 50px;
+		margin-left: 25px;
+		font-weight: 200;
+	}
+
+	.slide-menu hr {
+		width: 100%;
+		height: 1px;
+		margin-top: 50px;
+	}
+
+	.slide-menu img {
+		width: 220px;
+		height: 80px;
+		margin-top: 30px;
+		margin-left: 15px;
+	}
+
+	/* 메인 베너 */
+	.swiper-container {
+		height: 400px;
+	}
+
+	.swiper-slide img {
+		height: 400px;
+	}
+
+	/***** 메인 베너 *****/
+
+	.app_banner {
+		height: 300px;
+		top: 40px;
+	}
+
+	.app_banner h2 {
+		padding: 30px 20px;
+	}
+
+	.app_banner p {
+		display: block;
+		margin: -30px 20px;
+	}
+
+	.app_banner button {
+		margin: 40px 20px;
+	}
+
+	/* 플레이스토어 */
+	.app {
+		top: 60%;
+		left: 5%;
+		width: 100px;
+		height: 100px;
+		border-radius: 35px;
+	}
+
+	.app:hover {
+		width: 100px;
+		height: 100px;
+	}
+
+	.app_text p {
+		position: absolute;
+		top: 78%;
+		right: -2%;
+		font-size: 30px;
+	}
+
+	/* article */
+	.juice_left {
+		top: 80px;
+		height: 300px;
+	}
+
+	.juice_left h2:nth-child(5),
+	.juice_left h2:nth-child(6) {
+		font-size: 14px;
+	}
+
+	.juice_right {
+		top: 80px;
+		height: 300px;
+	}
+
+	.juice_right h2:nth-child(5),
+	.juice_right h2:nth-child(6) {
+		font-size: 13px;
+	}
+
+	/* 베스트 드링크 */
+	.drink_div {
+		height: 900px;
+		top: 125px;
+		font-size: 12px;
+	}
+
+	/* text 롤링 */
+	.marquee {
+		top: 120px
+	}
+
+	.p_card {
+		margin: 37px 15px;
+		height: auto;
+	}
+
+	.best_img {
+		width: 80px;
+		height: 120px;
+	}
+
+	.p_drink1 {
+		width: 250px;
+		height: 250px;
+		margin: 10px 40px;
+	}
+
+	.p_drink2,
+	.p_drink3,
+	.p_drink4 {
+		width: 250px;
+		height: 250px;
+		margin: 10px 40px;
+	}
+
+	/* 라디오 버튼 */
+	.radio_div {
+		top: 130px;
+	}
+
+	input[type="radio"]+span {
+		top: 18px;
+	}
+
+	/* 이벤트 글자 div */
+	.event_div {
+		bottom: 4.5%;
 	}
 
 	/* footer */
 	footer {
 		position: relative;
-		bottom: -80%;
+		width: 100%;
+		height: 40vh;
+		bottom: 0;
+	}
+
+	footer ul {
+		position: relative;
+		float: left;
+		margin-left: 4.5%;
+	}
+
+	.ft_text {
+		font-size: 10px;
+		margin-top: 8px;
+		margin-left: -20px;
+	}
+
+	.content_line {
+		font-size: 10px;
+	}
+
+	/* Qr코드 */
+	.content_line .qr_img {
+		width: 12px;
+		height: 12px;
+	}
+
+	/* Top 버튼 */
+	.top_btn,
+	.top_btn img {
+		display: none;
 	}
 }
