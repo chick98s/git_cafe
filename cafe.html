@@ -215,11 +215,11 @@
 			<div class="marquee">
 				<div class="track">
 					<span class="text">BEST-DRINK</span>
+					<span class="text">BEST-BINGSU</span>
 					<span class="text">BEST-DRINK</span>
+					<span class="text">BEST-BINGSU</span>
 					<span class="text">BEST-DRINK</span>
-					<span class="text">BEST-DRINK</span>
-					<span class="text">BEST-DRINK</span>
-					<span class="text">BEST-DRINK</span>
+					<span class="text">BEST-BINGSU</span>
 				</div>
 			</div>
 
@@ -504,23 +504,6 @@
 					},
 				}
 			});
-
-			/* 텍스트 롤링 */
-			function TextRolling() {
-				var width = $('.flow_banner').width();
-				var num = $('.list li').length();
-				var max = width * num;
-				var move = 0;
-
-				move += width;
-				$('.flow_banner').animate({ "left": -move }, 400, function () {
-					if (move >= max) {
-						$(this).css("left", 0);
-						move = 0;
-					}
-				});
-				$('.list').append($('.list li').first().clone());
-			}
 
 			/* 인기메뉴 버튼 */
 			$("#radio1").click(function () {
