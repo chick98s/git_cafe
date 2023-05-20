@@ -28,6 +28,9 @@ body {
 	overflow-x: hidden;
 }
 
+/* 유효성*/
+h6 { display: none; }
+
 .wrap {
 	position: relative;
 	min-height: 100%;
@@ -770,6 +773,7 @@ hr {
 		background-color: rgb(41, 40, 40);
 		display: block;
 		transition: all .3s ease-in-out;
+		border: 1px solid blue;
 	}
 
 	.nav_icon span:nth-of-type(1) {
