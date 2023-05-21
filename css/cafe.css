@@ -434,10 +434,10 @@ main {
 	border: 1px solid firebrick;
 	/* 먼저 쓴 색의 퍼센트가 높으면 그라이데이션 안됨 */
 	background: linear-gradient(to bottom, rgba(65, 64, 64, 0.8) 70%, #FAFAFA 30%);
-	width: 350px;
+	width: 25%;
 	height: 450px;
 	margin: 0 10px;
-	transform: translate(35%, 0%);
+	transform: translate(40%, 0%);
 }
 
 .p_drink2,
@@ -448,10 +448,10 @@ main {
 	float: left;
 	border: 1px solid firebrick;
 	background: linear-gradient(to bottom, rgb(65, 64, 64, 0.8) 70%, #FAFAFA 30%);
-	width: 350px;
+	width: 25%;
 	height: 450px;
 	margin: 0 10px;
-	transform: translate(35%, 0%);
+	transform: translate(40%, 0%);
 	display: none;
 }
 
@@ -681,17 +681,15 @@ hr {
 	}
 
 	.p_drink1 {
-		width: 300px;
 		height: 400px;
-		margin: 5px 30px;
+		transform: translate(40%, 8%);
 	}
 
 	.p_drink2,
 	.p_drink3,
 	.p_drink4 {
-		width: 300px;
 		height: 400px;
-		margin: 5px 30px;
+		transform: translate(40%, 8%);
 	}
 
 	/* 라디오 버튼 */
@@ -729,7 +727,6 @@ hr {
 
 /* 모바일 */
 @media screen and (min-width: 320px) and (max-width: 800px) {
-
 	/* 헤더 */
 	header {
 		height: 50px;
@@ -805,6 +802,10 @@ hr {
 		flex-direction: column;
 		justify-content: center;
 	}
+
+	main {
+		min-height: 250vh;
+	}	
 
 	/* 사이드 메뉴 */
 	.slide-wrap {
@@ -928,8 +929,8 @@ hr {
 
 	/* 베스트 드링크 */
 	.drink_div {
-		height: 900px;
 		top: 125px;
+		height: 550px;
 		font-size: 12px;
 	}
 
@@ -939,27 +940,30 @@ hr {
 	}
 
 	.p_card {
-		margin: 37px 15px;
+		font-size: 10px;
+		margin: 12px 15px;
 		height: auto;
 	}
 
 	.best_img {
-		width: 80px;
-		height: 120px;
+		width: 50px;
+		height: 80px;
 	}
 
 	.p_drink1 {
-		width: 250px;
-		height: 250px;
-		margin: 10px 40px;
+		width: 50%;
+		height: 155px;
+		margin: 10px 0;
+		transform: translate(48%, -10%);
 	}
 
 	.p_drink2,
 	.p_drink3,
 	.p_drink4 {
-		width: 250px;
-		height: 250px;
-		margin: 10px 40px;
+		width: 50%;
+		height: 155px;
+		margin: 10px 0;
+		transform: translate(48%, -10%);
 	}
 
 	/* 라디오 버튼 */
@@ -973,7 +977,7 @@ hr {
 
 	/* 이벤트 글자 div */
 	.event_div {
-		bottom: 4.5%;
+		bottom: 3.5%;
 	}
 
 	/* footer */
