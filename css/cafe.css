@@ -19,21 +19,20 @@ a {
 }
 
 html, body {
-	height: 100%;
+	width: 100%;
+	height: auto;
 }
 
 body {
 	text-align: center;
-	font-family: 'jejuhallasan', sans-serif;
 	overflow-x: hidden;
+	font-family: 'jejuhallasan', sans-serif;
+	background-color: #ededed;
 }
 
 /* 유효성*/
-h6 { display: none; }
-
-.wrap {
-	position: relative;
-	min-height: 100%;
+h6 {
+	display: none;
 }
 
 /* 헤더 */
@@ -48,6 +47,11 @@ header {
 	background: #DA0037;
 }
 
+
+.wrap {
+	height: 100%;
+}
+
 .logo {
 	font-size: 35px;
 	font-weight: bold;
@@ -55,7 +59,8 @@ header {
 }
 
 /* 토글메뉴 */
-.nav_toggle, .toggle_menu {
+.nav_toggle,
+.toggle_menu {
 	display: none;
 }
 
@@ -144,8 +149,7 @@ nav li:hover {
 main {
 	position: relative;
 	top: 20px;
-	background: #ffffff;
-	min-height: 300vh;
+	height: 300vh;
 }
 
 /* 메인 베너 */
@@ -393,7 +397,7 @@ main {
 	position: relative;
 	width: 85%;
 	height: 500px;
-	top: 80px;
+	top: 75px;
 	margin: 0 auto;
 	font-size: 18px;
 	background-image: url(../image/bg_best.png);
@@ -469,10 +473,11 @@ main {
 .radio_div {
 	position: relative;
 	width: 85%;
-	top: 85px;
+	top: 75px;
 	height: 55px;
 	text-align: center;
-	background: #FAFAFA;
+	background: #fafafa;
+	border: 1px dashed firebrick;
 	margin: 0 auto;
 }
 
@@ -510,8 +515,7 @@ input[type="radio"]:checked+span {
 .event_div {
 	position: absolute;
 	width: 100%;
-	height: 200px;
-	bottom: 4.2%;
+	bottom: 5%;
 }
 
 .event_div span {
@@ -640,12 +644,15 @@ hr {
 	opacity: 0.7;
 }
 
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1299px) {	
+	main {
+		height: 370vh;
+	}
+
 	.app_banner {
 		top: 20px;
 	}
 
-	/* 플레이스토어 */
 	.app {
 		top: 15%;
 		left: 48%;
@@ -657,7 +664,6 @@ hr {
 		font-size: 30px;
 	}
 
-	/* article */
 	.juice_left {
 		top: 40px;
 	}
@@ -666,16 +672,14 @@ hr {
 		top: 40px;
 	}
 
-	/* text 롤링 */
 	.marquee {
 		top: 60px
 	}
 
 	.drink_div {
-		top: 65px;
+		top: 60px;
 	}
 
-	/* 음료 이미지 */
 	.best_img {
 		height: 200px;
 	}
@@ -692,33 +696,14 @@ hr {
 		transform: translate(40%, 8%);
 	}
 
-	/* 라디오 버튼 */
 	.radio_div {
-		top: 70px;
+		top: 60px;
 	}
 
 	.event_div {
-		position: absolute;
-		bottom: -16.5%;
+		bottom: 3%;
 	}
 
-	/* footer */
-	footer {
-		position: absolute;
-		left: 50%;
-		bottom: -35%;
-		transform: translate(-50%, 0%);
-	}
-
-	footer ul {
-		margin-left: 14%; 
-	}
-
-	.ft_text {
-		margin-left: 5%;
-	}
-
-	/* Top 버튼 */
 	.top_btn {
 		bottom: 40px;
 		right: 30px;
@@ -726,7 +711,7 @@ hr {
 }
 
 /* 모바일 */
-@media screen and (min-width: 320px) and (max-width: 800px) {
+@media screen and (max-width: 769px) {
 	/* 헤더 */
 	header {
 		height: 50px;
@@ -737,7 +722,9 @@ hr {
 		font-size: 35px;
 	}
 
-	nav { display: none; }
+	nav {
+		display: none;
+	}
 
 	/* 햄버거 메뉴 */
 	.nav_toggle {
@@ -804,8 +791,8 @@ hr {
 	}
 
 	main {
-		min-height: 250vh;
-	}	
+		height: 250vh;
+	}
 
 	/* 사이드 메뉴 */
 	.slide-wrap {
@@ -869,7 +856,7 @@ hr {
 
 	.app_banner {
 		height: 300px;
-		top: 40px;
+		top: 20px;
 	}
 
 	.app_banner h2 {
@@ -908,7 +895,7 @@ hr {
 
 	/* article */
 	.juice_left {
-		top: 80px;
+		top: 40px;
 		height: 300px;
 	}
 
@@ -918,7 +905,7 @@ hr {
 	}
 
 	.juice_right {
-		top: 80px;
+		top: 40px;
 		height: 300px;
 	}
 
@@ -927,16 +914,16 @@ hr {
 		font-size: 13px;
 	}
 
-	/* 베스트 드링크 */
-	.drink_div {
-		top: 125px;
-		height: 550px;
-		font-size: 12px;
-	}
-
 	/* text 롤링 */
 	.marquee {
-		top: 120px
+		top: 60px
+	}
+
+	/* 베스트 드링크 */
+	.drink_div {
+		top: 60px;
+		height: 550px;
+		font-size: 12px;
 	}
 
 	.p_card {
@@ -968,7 +955,7 @@ hr {
 
 	/* 라디오 버튼 */
 	.radio_div {
-		top: 130px;
+		top: 60px;
 	}
 
 	input[type="radio"]+span {
@@ -977,7 +964,8 @@ hr {
 
 	/* 이벤트 글자 div */
 	.event_div {
-		bottom: 3.5%;
+		position: relative;
+		top: 7%;
 	}
 
 	/* footer */
