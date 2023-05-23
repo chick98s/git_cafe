@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="./css/cafe.css">
 
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-	<div class="wrap">
+	<div id="wrap">
 		<header>
 			<span class="logo">COFFEE</span>
 
@@ -184,10 +184,6 @@
 				<p>최신 소식을 알고 싶다면 어플 다운 GO</p>
 
 				<div class="app"></div>
-				<div class="app_text">
-					<p>Google Play-!</p>
-				</div>
-
 				<button></button>
 			</article>
 
@@ -224,6 +220,11 @@
 
 			<!--음료수-->
 			<div class="drink_div">
+				<!--모바일 음료수-->
+				<div class="m_btn">
+					<a href="./menu.html" target="_blank"><button>메뉴보기</button></a>
+				</div>
+				<!---------------->
 				<div class="p_drink1">
 					<img class="best_img" src="./image/s_bubble.png" alt="딸기버블티">
 
@@ -393,13 +394,11 @@
 			</div>
 
 			<div class="event_div">
-				<span>COFFEE EVENT</span>
-				<p>#카페 &nbsp; #신메뉴 &nbsp; #이벤트</p>
+				<p style="color: #ad2525;">COFFEE EVENT</p>
+				<p style="color: #403a3a">#카페 &nbsp; #신메뉴 &nbsp; #이벤트</p>
 				<br>
 				<hr>
-				<button>
-					<img src="./image/r_arrow.png" alt="화살표(오른쪽)">
-				</button>
+				<input type="image" src="./image/r_arrow.png" alt="오른쪽 화살표">
 			</div>
 		</main>
 
