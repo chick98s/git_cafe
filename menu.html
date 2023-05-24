@@ -12,10 +12,162 @@
 
     <!--타이틀 이미지-->
     <link href="./image/cflogo.png" rel="shortcut icon" type="image/x-icon">
+
+    <!-- include jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-    <div class="p_drink1">
+    <header>
+        <a href="http://chick98s.github.io/git_cafe/cage.html"><span class="logo">COFFEE</span></a>
+
+        <!-- 토글 버튼 -->
+        <button class="nav_toggle" onclick="tgMenu();">
+            <span class="nav_icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <div class="toggle_menu" onclick="tgMenu();">
+            <div class="slide-wrap">
+                <div class="slide-menu">
+                    <span>로그인</span>이 필요해요!
+                    <p>장바구니 내역</p>
+                    <p>주문·배송 내역</p>
+                    <hr>
+                    <p>음료수</p>
+                    <p>디저트</p>
+                    <hr>
+                    <p>공지사항</p>
+                    <p>고객센터</p>
+                    <hr>
+                    <img src="./image/talk.png" alt="카카오톡_이미지">
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#">COFFEE</a>
+                    <div class="sub_menu">
+                        <ul class="sub">
+                            <li>칼로리</li>
+
+                            <li><a href="#">아메리카노</a></li>
+                            <li><a href="#">에스프레소</a></li>
+                            <li><a href="#">마키아또</a></li>
+                            <li><a href="#">카푸치노</a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>커피</li>
+                            <li><a href="#">원두</a></li>
+                            <li><a href="#">캡슐</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#">MENU</a>
+                    <div class="sub_menu">
+                        <ul class="sub">
+                            <li>신메뉴</li>
+
+                            <li><a href="#">초코초코</a></li>
+                            <li><a href="#">밀크초코</a></li>
+                            <li><a href="#">소다에이드</a></li>
+                            <li><a href="#">자몽풍듀</a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>음료</li>
+
+                            <li><a href="#">초코스무디</a></li>
+                            <li><a href="#">딸기스무디</a></li>
+                            <li><a href="#">허브차</a></li>
+                            <li><a href="#">체리스무디 </a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>디저트</li>
+
+                            <li><a href="#">브레드</a></li>
+                            <li><a href="#">케이크</a></li>
+                            <li><a href="#">샌드위치</a></li>
+                            <li><a href="#">샐러드</a></li>
+                            <li><a href="#">마카롱</a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>커피</li>
+
+                            <li><a href="#">카푸치노</a></li>
+                            <li><a href="#">마로치노</a></li>
+                            <li><a href="#">아포가또</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#">SHOP</a>
+                    <div class="sub_menu">
+                        <ul class="sub">
+                            <li>이벤트</li>
+
+                            <li><a href="#">1+1 이벤트</a></li>
+                            <li><a href="#">적립 & 할인</a></li>
+                            <li><a href="#">사은품</a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>매장</li>
+
+                            <li><a href="#">퀵 검색</a></li>
+                            <li><a href="#">지점 검색</a></li>
+                        </ul>
+
+                        <ul class="sub">
+                            <li>카드</li>
+
+                            <li><a href="#">삼성페이</a></li>
+                            <li><a href="#">카카오페이</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#">NOTICE</a>
+                    <div class="sub_menu">
+                        <ul class="sub">
+                            <li>알림</li>
+
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--라디오 버튼 -->
+    <div class="radio_div">
+        <label>
+            <input type="radio" id="radio1" name="radio">
+            <span>ALL</span>
+        </label>
+
+        <label>
+            <input type="radio" id="radio2" name="radio">
+            <span>음료</span>
+        </label>
+
+        <label>
+            <input type="radio" id="radio3" name="radio">
+            <span>디저트</span>
+        </label>
+    </div>
+
+    <div class="p_menu2">
         <img class="best_img" src="./image/s_bubble.png" alt="딸기버블티">
 
         <div class="p_card">
@@ -27,7 +179,7 @@
         </div>
     </div>
 
-    <div class="p_drink1">
+    <div class="p_menu2">
         <img class="best_img" src="./image/bubble2.png" alt="흑당버블티">
 
         <div class="p_card">
@@ -39,7 +191,7 @@
         </div>
     </div>
 
-    <div class="p_drink1">
+    <div class="p_menu2">
         <img class="best_img" src="./image/m_bubble.png" alt="밀크버븥티">
 
         <div class="p_card">
@@ -51,7 +203,31 @@
         </div>
     </div>
 
-    <div class="p_drink2">
+    <div class="p_menu2">
+        <img class="best_img" src="./image/bubble4.png" alt="초코버블티">
+
+        <div class="p_card">
+            <h3>인기</h3>
+            <span>
+                초코버블티<br>
+                2,500(원)
+            </span>
+        </div>
+    </div>
+
+    <div class="p_menu2">
+        <img class="best_img" src="./image/bubble5.png" alt="타로버블티">
+
+        <div class="p_card">
+            <h3>인기</h3>
+            <span>
+                타로버블티<br>
+                5,100(원)
+            </span>
+        </div>
+    </div>
+
+    <div class="p_menu2">
         <img class="best_img" src="./image/coffee4.png" alt="카라멜마끼아또">
 
         <div class="p_card">
@@ -63,7 +239,7 @@
         </div>
     </div>
 
-    <div class="p_drink2">
+    <div class="p_menu2">
         <img class="best_img" src="./image/latte1.png" alt="흑임자크림">
 
         <div class="p_card">
@@ -75,7 +251,7 @@
         </div>
     </div>
 
-    <div class="p_drink2">
+    <div class="p_menu2">
         <img class="best_img" src="./image/latte2.png" alt="스노우초코">
 
         <div class="p_card">
@@ -87,7 +263,7 @@
         </div>
     </div>
 
-    <div class="p_drink3">
+    <div class="p_menu2">
         <img class="best_img" src="./image/latte3.png" alt="흑임자라떼">
 
         <div class="p_card">
@@ -99,7 +275,7 @@
         </div>
     </div>
 
-    <div class="p_drink3">
+    <div class="p_menu2">
         <img class="best_img" src="./image/latte4.png" alt="달고나음료">
 
         <div class="p_card">
@@ -111,7 +287,7 @@
         </div>
     </div>
 
-    <div class="p_drink3">
+    <div class="p_menu3">
         <img class="best_img" src="./image/bingsu1.png" alt="초코빙수">
 
         <div class="p_card">
@@ -123,7 +299,7 @@
         </div>
     </div>
 
-    <div class="p_drink4">
+    <div class="p_menu3">
         <img class="best_img" src="./image/bingsu2.png" alt="망고빙수">
 
         <div class="p_card">
@@ -135,7 +311,7 @@
         </div>
     </div>
 
-    <div class="p_drink4">
+    <div class="p_menu3">
         <img class="best_img" src="./image/bingsu3.png" alt="생딸기빙수">
 
         <div class="p_card">
@@ -147,7 +323,7 @@
         </div>
     </div>
 
-    <div class="p_drink4">
+    <div class="p_menu3">
         <img class="best_img" src="./image/bingsu4.png" alt="우유빙수">
 
         <div class="p_card">
@@ -159,29 +335,70 @@
         </div>
     </div>
 
-    <!--라디오 버튼 -->
-    <div class="radio_div">
-        <label>
-            <input type="radio" id="radio1" name="radio">
-            <span></span>
-        </label>
+    <div class="p_menu3">
+        <img class="best_img" src="./image/bread1.png" alt="소금버터빵">
 
-        <label>
-            <input type="radio" id="radio2" name="radio">
-            <span></span>
-        </label>
-
-        <label>
-            <input type="radio" id="radio3" name="radio">
-            <span></span>
-        </label>
-
-        <label>
-            <input type="radio" id="radio4" name="radio">
-            <span></span>
-        </label>
+        <div class="p_card">
+            <h3>인기</h3>
+            <span>
+                소금버터빵<br>
+                3,800(원)
+            </span>
+        </div>
     </div>
 
+    <div class="p_menu3">
+        <img class="best_img" src="./image/bread2.png" alt="데니쉬식빵">
+
+        <div class="p_card">
+            <h3>인기</h3>
+            <span>
+                데니쉬식빵<br>
+                6,900(원)
+            </span>
+        </div>
+    </div>
+
+    <div class="p_menu3">
+        <img class="best_img" src="./image/bread3.png" alt="에그타르트">
+
+        <div class="p_card">
+            <h3>인기</h3>
+            <span>
+                에그타르트<br>
+                3,200(원)
+            </span>
+        </div>
+    </div>
+
+    <script>
+        /*라디오 버튼 첫번째 체크*/
+		$('input:radio[type="radio"]').eq(0).attr("checked", true);
+
+        $(document).ready(function() {
+            /* 인기메뉴 버튼 */ 
+			$("#radio1").click(function () {
+				$('.p_menu1').show();
+
+				$('.p_menu2').show();
+				$('.p_menu3').show();
+			});
+
+			$("#radio2").click(function () {
+				$('.p_menu2').show();
+
+				$('.p_menu1').hide();
+				$('.p_menu3').hide();
+			});
+
+			$("#radio3").click(function () {
+				$('.p_menu3').show();
+
+				$('.p_menu1').hide();
+				$('.p_menu2').hide();
+			});
+        });
+    </script>
 </body>
 
 </html>
