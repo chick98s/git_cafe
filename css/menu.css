@@ -1,27 +1,151 @@
 @charset "utf-8";
 
-/* 음료메뉴 */
-.p_card {
-    position: absolute;
-    margin: 70px 15px;
-    text-align: left;
-    height: auto;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.drink_div h3 {
-    color: #8959c9;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	padding: 1rem;
+	background: #DA0037;
+}
+
+.logo {
+	margin: 0 auto;
+	font-size: 35px;
     font-weight: bold;
 }
 
-.drink_div span {
+nav {
+	display: block;
+	width: 100%;
+}
+
+.menu {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+}
+
+.menu li {
+    display: block;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    font-size: 20px;
+    width: 15%;
+}
+
+.menu li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav li:hover {
+    background: rgb(41, 40, 40, 0.8);
+}
+
+.sub_menu {
+    position: absolute;
+    top: 80%;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0 auto;
+    overflow: hidden;
+    display: none;
+}
+
+.sub_menu .sub {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.sub li {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+}
+
+.sub li:hover {
+    background: none;
+}
+
+.sub li a {
+    font-size: 18px;
+}
+
+.menu li:hover .sub_menu {
+    display: flex;
+    background: #DA0037;
+    opacity: 0.9;
+    transition: .3s ease-in;
+    z-index: 999;
+}
+
+.sub_menu li a:hover {
+    color: rgb(41, 40, 40);
+}
+
+/* 햄버거 메뉴 */
+.nav_toggle {
+	display: none;
+}
+
+/* 사이드 메뉴 */
+.slide-wrap {
+	display: none;
+}
+
+/* 음료메뉴 */
+.p_card {
+    position: relative;
+    left: 5%;
+    top: 25%;
+    text-align: left;
+}
+
+.p_card h3 {
+    color: #6a1db3;
+    font-weight: bold;
+}
+
+.p_card span {
     color: #000;
     font-weight: bold;
 }
 
 .best_img {
-    width: 35%;
-    height: 230px;
-    margin-top: 12%;
+    position: relative;
+    width: 25%;
+    height: 200px;
+    top: 10%;
     transition: all .5s ease-in-out;
 }
 
@@ -29,46 +153,50 @@
     transform: scale(1.2);
 }
 
-.p_drink1 {
+.p_menu1 {
     position: relative;
-    top: 5%;
+    top: 60px;
     float: left;
-    border: 1px solid firebrick;
-    background: linear-gradient(to bottom, rgba(65, 64, 64, 0.8) 70%, #FAFAFA 30%);
+    background: linear-gradient(to bottom, rgb(158, 28, 28) 70%, lightgray 30%);
     width: 25%;
-    height: 450px;
+    height: 390px;
+    text-align: center;
     margin: 0 10px;
     transform: translate(40%, 0%);
 }
 
-.p_drink2,
-.p_drink3,
-.p_drink4 {
+.p_menu2,
+.p_menu3 {
     position: relative;
-    top: 5%;
+    top: 60px;
     float: left;
-    border: 1px solid firebrick;
-    background: linear-gradient(to bottom, rgb(233, 230, 230) 70%, #FAFAFA 30%);
+    background: linear-gradient(to bottom, rgb(158, 28, 28) 70%, lightgray 30%);
     width: 25%;
-    height: 450px;
+    height: 390px;
     margin: 0 10px;
+    text-align: center;
     transform: translate(40%, 0%);
-    display: none;
+    margin-bottom: 8%;
 }
 
 .radio_div {
     position: relative;
     width: 100%;
     height: 55px;
-    text-align: center;
-    background: #ffffff;
-    border: 1px dashed firebrick;
+    display: block;
     margin: 0 auto;
+    text-align: center;
 }
 
 .radio_div label {
     margin: 0 5px;
 }
+
+.radio_div span {
+    text-align: center;
+    font-size: 1rem;
+    text-align: center;
+} 
 
 input[type="radio"] {
     display: none;
@@ -77,28 +205,28 @@ input[type="radio"] {
 input[type="radio"]+span {
     position: relative;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 60px;
+    height: 25px;
     top: 20px;
     border-radius: 50px;
-    background: #fff;
-    border: 2px solid black;
+    color: #000;
+    border: 1px solid #000;
     transition: all .5s ease-out;
 }
 
 input[type="radio"]:checked+span {
-    width: 30px;
-    height: 15px;
-    border-radius: 50px;
+    color: #000;
     background: #ff0000;
+    border: 1px solid black;
 }
 
-@media (min-width: 992px) {
+/*
+@media (max-width: 576px) {
     .p_drink1 {
         position: relative;
         top: 5%;
         float: left;
-        background: linear-gradient(to bottom, rgb(233, 230, 230) 70%, #FAFAFA 30%);
+        background: linear-gradient(to bottom, red 70%, #FAFAFA 30%);
         width: 25%;
         height: 450px;
         margin: 0 10px;
@@ -107,7 +235,7 @@ input[type="radio"]:checked+span {
 
     .p_card {
         position: absolute;
-        margin: 70px 15px;
+        margin: 20px 15px;
         text-align: left;
         height: auto;
     }
@@ -197,3 +325,4 @@ input[type="radio"]:checked+span {
         background: #ff0000;
     }
 }
+*/
