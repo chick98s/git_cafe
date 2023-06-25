@@ -11,7 +11,7 @@
 	<title>CAFE</title>
 
 	<!--타이틀 이미지-->
-	<link href="./image/cflogo.png" rel="shortcut icon" type="image/x-icon">
+	<link href="./image/logo.png" rel="shortcut icon" type="image/x-icon">
 
 	<!-- include jQuery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -27,7 +27,9 @@
 <body>
 	<div id="wrap">
 		<header>
-			<span class="logo">COFFEE</span>
+			<a href="http://chick98s.github.io/git_cafe/cafe.html">
+				<img class="logo" src="./image/logo.png">
+			</a>
 
 			<!-- 토글 버튼 -->
 			<button class="nav_toggle" onclick="tgMenu();">
@@ -184,7 +186,6 @@
 				<p>최신 소식을 알고 싶다면 어플 다운 GO</p>
 
 				<div class="app"></div>
-				<button></button>
 			</article>
 
 			<!--음료소개-->
@@ -209,8 +210,11 @@
 			<!--음료수-->
 			<div class="drink_div">
 				<!--모바일 음료수-->
-				<p>BEST-MENU</p>
-				<p>20년 전통의 역사</p>
+				<p class="cf_text inUp">				   
+				   오랜 노하우로 국내외 커피 시장을 선도하며<br>
+				   스페셜티 커피와 디저트, 문화가 융합된 특별한 공간으로<br>
+				   대한민국을 비롯해 전 세계에서 사랑받는 브랜드입니다.
+				</p>
 
 				<div class="m_btn">
 					<button onclick="location.href='//chick98s.github.io/git_cafe/menu.html'">메뉴보기</button>
@@ -220,58 +224,35 @@
 
 		<!-- footer -->
 		<footer>
-			<ul>
-				<li>매장안내</li>
-				<li>칼로리</li>
-				<li>로그인</li>
-				<li>멤버십</li>
+			<ul class="u_center"> 
+				<li style="font-weight:100; font-size: 18px;">고객만족센터</li>
+				<li>02. 1234. 5678</li>	
 			</ul>
 
-			<ul>
-				<li>고객센터</li>
-				<li>080-123-1234</li>
-				<li>주문/결재</li>
-				<li>배송</li>
-				<li>주문배송조회</li>
+			<ul class="l_list">
+				<li>회사소개</li>
+				<li>채용안내</li>
+				<li>프랜차이즈</li>
+				<li>계열사소개</li>
 				<li>공지사항</li>
-				<li>1:1 문의</li>
+				<li>고객만족센터</li>
+				<li>찾아오시는 길</li>
+				<li>가맹점전용게시판</li>
 			</ul>
 
-			<ul>
-				<li>ABOUT</li>
-				<li>커피에 대하여</li>
+			<ul class="sns">
+				<li><img src="./image/i_sns.png"></li>
+				<li><img src="./image/f_sns.png"></li>
+				<li><img src="./image/y_sns.png"></li>
+				<li><img src="./image/b_sns.png"></li>
 			</ul>
-
-			<ul>
-				<li>SNS</li>
-				<li class="li_sns">
-					<img src="./image/twiter.png" alt="트위터">
-				</li>
-
-				<li class="li_sns">
-					<img src="./image/i_sns.png" alt="인스타그램">
-				</li>
-
-				<li class="li_sns">
-					<img src="./image/facebook.png" alt="페이스북">
-				</li>
-			</ul>
-
-			<hr>
-
-			<p class="ft_text">안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한</p>
-			<p class="ft_text">KG 이니시스의 구매안전 서비스를 이용하실 수 있습니다.</p>
-
-			<p class="ft_text">
-				온라인디지털콘텐츠사업발전법에 의한
-				<a href="#">
-					<span class="content_line">
-						콘텐츠보호안내 자세히보기
-						<img class="qr_img" src="./image/qrcode.png" alt="QR코드">
-					</span>
-				</a>
+			
+			<p class="copy">
+				서울특별시 광진구 아차산로 123&nbsp;대표: 최소연<br>
+				사업자등록번호:123-12-1245&nbsp;TEL:02-121-1222<br><br>
+				COPYRIGHTⓒ2022 CAFE COFFEE. ALL RIGHTS RESERVED.
 			</p>
-
+			
 			<!--Top-->
 			<div class="top_btn">
 				<a href="#"><img src="./image/top.png" alt="Top버튼"></a>
@@ -289,7 +270,7 @@
 			let menu = document.querySelector(".toggle_menu");
 			menu.classList.toggle("active");
 		}
-
+		
 		$(document).ready(function () {
 			//나이스 스크롤
 			$('body').niceScroll();
@@ -315,25 +296,25 @@
 					},
 				}
 			});
-		});
 
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 500) {
-				//스크롤이 밑으로 내려갔을때 보여짐
-				$(".top_btn").fadeIn();
-			}
-			else {
-				$(".top_btn").fadeOut();
-			}
+			$(window).scroll(function () {
+				// top 버튼 
+				if ($(this).scrollTop() > 500) {
+					//스크롤이 밑으로 내려갔을때 보여짐
+					$(".top_btn").fadeIn();
+				}
+
+				else	{
+					$(".top_btn").fadeOut();
+				}
+			});
 		});
 
 		/* Top 버튼 스크롤 */
-		//클릭했을 때 스르륵 올라가는 애니메이션
 		$(".top_btn").click(function () {
 			$("html, body"), animate({ scrollTop: 0 }, 400);
 			return false;
 		});
-
 	</script>
 </body>
 
